@@ -1,10 +1,11 @@
 package com.example.springboot.Controller;
 
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.example.springboot.dto.MemberDTO;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
+import java.lang.reflect.Member;
 import java.util.Map;
 
 @RestController
@@ -20,5 +21,17 @@ public class PutController {
         return sb.toString();
     }
 
+    @PutMapping("/member2")
+    public MemberDTO postMember2(@RequestBody MemberDTO memberDTO){
+        return memberDTO;
+    }
+
+    @PutMapping("/member3")
+    public ResponseEntity<MemberDTO> postMember3(@RequestBody MemberDTO memberDTO){
+        return ResponseEntity                           // 사용자가 원하는대로 상태메세지와 header, body를 바꿀수 있음
+                .status(HttpStatus.ACCEPTED)            // 정상 응답코드가 200에서 202로 변경됨
+                .body(memberDTO);
+    }
+    
 
 }
