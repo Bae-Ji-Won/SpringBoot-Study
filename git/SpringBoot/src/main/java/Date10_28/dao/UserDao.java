@@ -4,33 +4,31 @@ package Date10_28.dao;
 
 import Date10_28.domain.User;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.RowMapper;
+import org.springframework.stereotype.Component;
 
 import javax.sql.DataSource;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.List;
 
-// 중복코드만 따로 빼내서 작성한 코드 (첫번째 방식)
+
+@Component
 public class UserDao {
 
-    private JdbcTemplate jdbcTemplate;      // jdbcTemplate 선언
+    private JdbcTemplate jdbcTemplate;
 
     public UserDao(DataSource dataSource) {
-        this.jdbcTemplate = new JdbcTemplate(dataSource); // 구체적인 클래스 이름이 들어가는 구간
+        this.jdbcTemplate = new JdbcTemplate(dataSource);
     }
 
 
-    public void add(final User user){
+    public void add(User user){
             this.jdbcTemplate.update("insert into users(id,name,password) values (?,?,?);",
             user.getId(),user.getName(),user.getPassword());
     }
 
-    public void delete(){
-        this.jdbcTemplate.update("delete from users where id");   // 쿼리만 넘겨줌
+    public void delete(String id){
+        this.jdbcTemplate.update("delete from users where id=?",id);
     }
 
     public void deleteAll(){
-        this.jdbcTemplate.update("delete from users");   // 쿼리만 넘겨줌
+        this.jdbcTemplate.update("delete from users");
     }
 }
