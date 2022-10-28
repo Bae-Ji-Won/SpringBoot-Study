@@ -4,3 +4,8 @@ spring:
       matching-strategy:
         ant_path_matcher
 
+
+SPRING_DATASOURCE_URL=jdbc:mysql://ec2-3-237-172-98:
+  compute-1:
+    amazonaws:
+      com:3306/likelion-db:
