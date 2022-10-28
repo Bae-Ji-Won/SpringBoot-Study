@@ -27,6 +27,6 @@ public class UserController {
 
     @DeleteMapping("/userdeleteall")
     public void deleteall(){
-        userDao.deleteAll();        // db 전체 삭제
+        userDao.deleteAll();        // DB 전체 삭제
     }
 }
