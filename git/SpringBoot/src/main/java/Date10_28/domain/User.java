@@ -1,12 +1,12 @@
-package Date10_28.dto;
+package Date10_28.domain;
 
-public class UserDTO {
+public class User {
 
     private String id;
     private String name;
     private String password;
 
-    public UserDTO(String id, String name, String password) {
+    public User(String id, String name, String password) {
         this.id = id;
         this.name = name;
         this.password = password;
