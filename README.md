@@ -3,7 +3,7 @@
 # 🗓 공부 일정
 - 2022-10-26 : Spring boot 시작<br>
 
-- 2022-10-27 : 
+- 2022-10-27 : Rest API(GET,POST,PUT,DELETE) + Swagger
 
 # ⚙️ 기술 스택
 <div>
