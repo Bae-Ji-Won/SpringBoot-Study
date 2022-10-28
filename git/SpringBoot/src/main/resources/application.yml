@@ -3,9 +3,19 @@ spring:
     pathmatch:
       matching-strategy:
         ant_path_matcher
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/likelion-db
+    username: root
+    password: 1q2w3e4r
 
 
 SPRING_DATASOURCE_URL=jdbc:mysql://ec2-3-237-172-98:
   compute-1:
     amazonaws:
       com:3306/likelion-db:
+
+
+
+
+
