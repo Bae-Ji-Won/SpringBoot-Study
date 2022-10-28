@@ -12,7 +12,8 @@ import javax.sql.DataSource;
 @Component
 public class UserDao {
 
-    private JdbcTemplate jdbcTemplate;
+    private JdbcTemplate jdbcTemplate;          // 원래는 @Autowired를 사용해야하는데 아래 생성자를 사용하게 되면 spring에서 자동으로
+                                                // 인식해서 생략 가능하다.
 
     public UserDao(DataSource dataSource) {
         this.jdbcTemplate = new JdbcTemplate(dataSource);
