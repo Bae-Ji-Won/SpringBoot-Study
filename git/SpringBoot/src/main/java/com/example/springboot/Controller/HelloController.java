@@ -1,6 +1,8 @@
 package com.example.springboot.Controller;
 
 import com.example.springboot.dto.MemberDTO;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
@@ -30,6 +32,7 @@ public class HelloController {
         return var;
     }
 
+    
     @GetMapping(value="/request")                               // 사용자가 값을 url에 ?로 변수에 담아서 보내면 @RequestParam으로 받아서 출력한다.
     // 무조건 RequestParam에 있는 변수들의 값을 모두 받아야함
     public String getRequestParam1(@RequestParam String name, @RequestParam String email,@RequestParam String organization){
@@ -60,6 +63,17 @@ public class HelloController {
     }
 
 
+
+
+    @ApiOperation(value="GET 메서드 예제", notes="@RequestParam을 활용한 Get Method")        // Swagger 사용하기위한 어노테이션
+    @GetMapping(value="/request4")                               // 사용자가 값을 url에 ?로 변수에 담아서 보내면 @RequestParam으로 받아서 출력한다.
+    // 무조건 RequestParam에 있는 변수들의 값을 모두 받아야함
+    public String SwaggergetRequestParam1(
+            @ApiParam(value="이름",required = true) @RequestParam String name,        // Swagger에 출력하기 위해 @ApiParam 사용
+            @ApiParam(value="이메일",required = true)@RequestParam String email,
+            @ApiParam(value="회사",required = true)@RequestParam String organization){
+        return name + " " + email + " " + organization;
+    }
 
 }
 
