@@ -3,14 +3,16 @@ package com.example.springboot.Controller;
 import com.example.springboot.dto.MemberDTO;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
 
 @RestController
 @RequestMapping("/api/v1/get-api")
+@Slf4j
 // RequestMapping => HTTP의 모든 요청 받음
-public class HelloController {
+public class GetController {
 
     @RequestMapping(value = "/hello",method = RequestMethod.GET)        // GetMapping 사용한다고 선언
     public String hello(){
@@ -75,5 +77,17 @@ public class HelloController {
         return name + " " + email + " " + organization;
     }
 
+
+    @GetMapping(value = "/name")                // 로그 남기기
+    public String LoggetHello(){
+        log.info("hello로 요청이 들어왔습니다");
+        return "hello";
+    }
+
+    @GetMapping(value = "/variable/{variable}")            // 로그 남기기
+    public String LoggetVariable(@PathVariable String variable){
+        log.info("getVariable으로 요청이 들어왓습니다. variable:{}",variable);     // 사용자가 입력한 값이 정상적으로 들어왔는지 확인하기 위해 log로 값을 출력함
+        return variable;
+    }
 }
 
