@@ -15,13 +15,15 @@ public class UserController {
     }
 
     @PostMapping("/useradd")                   // RequestBody를 통해 데이터를 입력받아 DTO에 저장후 출력
-    public void add(@RequestBody User user){
+    public User add(@RequestBody User user){
         userDao.deleteAll();        // DB 초기화
         userDao.add(user);          // 데이터 db에 추가
+        return user;
     }
 
-    @DeleteMapping("/userdelete")
-    public void delete(@RequestBody String id){
+    @DeleteMapping("/userdelete/{id}")
+    public void delete(@PathVariable("id") String id){
+        System.out.println(id);
         userDao.delete(id);         // 해당 id 데이터 삭제
     }
 
