@@ -25,14 +25,10 @@ public class HospitalParser implements Parser<Hospital> {
 //    assertEquals(52.29, hospital.getTotalAreaSize()); //col:32
     @Override
     public Hospital parse(String str) {
-        String[] row = str.replace("\",\"","").split(",");
-        // 데이터상 컬럼에 ,가 있는 값이 존재하므로 그냥 ,하나만을 가지고 구분하기에는 어려움이 있음
-        // 따라서 \,\
-        System.out.println(Arrays.toString(row));
+        String[] row = str.split("\",\"");
 
         Hospital hospital = new Hospital();
-        // 현재 모든 값이 string이므로 int형으로 저장하는 값들을 매핑함
-        hospital.setId(Integer.parseInt(row[0].replace("\"", "")));
+        hospital.setId(Integer.parseInt(row[0].replace("\"","")));
         hospital.setOpenServiceName(row[1]);
         hospital.setOpenLocalGovernmentCode(Integer.parseInt(row[3]));
         hospital.setManagementNumber(row[4]);
@@ -40,7 +36,7 @@ public class HospitalParser implements Parser<Hospital> {
         int year = Integer.parseInt(row[5].substring(0, 4));
         int month = Integer.parseInt(row[5].substring(4, 6));
         int day = Integer.parseInt(row[5].substring(6, 8));
-        hospital.setLicenseDate(LocalDateTime.of(year, month, day, 0, 0, 0));
+        hospital.setLicenseDate(LocalDateTime.of(year,month,day,0,0,0));
 
         hospital.setBusinessStatus(Integer.parseInt(row[7]));
         hospital.setBusinessStatusCode(Integer.parseInt(row[9]));
@@ -55,6 +51,6 @@ public class HospitalParser implements Parser<Hospital> {
         hospital.setTotalAreaSize(Float.parseFloat(row[32].replace("\"","")));
 
 
-        return new Hospital();
+        return hospital;
     }
 }
