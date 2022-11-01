@@ -1,8 +1,8 @@
-package Date10_28.dao;
+package com.example.springboot.Controller.Date10_28.dao;
 
 
 
-import Date10_28.domain.User;
+import com.example.springboot.Controller.Date10_28.domain.User;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
 
