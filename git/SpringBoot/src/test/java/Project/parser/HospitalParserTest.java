@@ -39,6 +39,13 @@ class HospitalParserTest {
     }
     
     @Test
+    @DisplayName("데이터 갯수 세기")
+    void count(){
+        int num =hospitalDao.getcount();
+        assertEquals(2,num);
+    }
+    
+    @Test
     @DisplayName("10만건 이상 파싱이 되었는지 확인")
     void name() throws IOException {
         // 서버환경에서 build할 때 문제가 생길 수 있다.
