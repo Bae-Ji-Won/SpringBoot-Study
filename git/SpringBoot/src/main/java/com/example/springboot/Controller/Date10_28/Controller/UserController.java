@@ -1,7 +1,7 @@
-package Date10_28.Controller;
+package com.example.springboot.Controller.Date10_28.Controller;
 
-import Date10_28.dao.UserDao;
-import Date10_28.domain.User;
+import com.example.springboot.Controller.Date10_28.dao.UserDao;
+import com.example.springboot.Controller.Date10_28.domain.User;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
