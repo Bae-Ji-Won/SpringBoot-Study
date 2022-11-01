@@ -1,8 +1,7 @@
 package Date10_28.Controller;
 
 
-import com.example.springboot.Controller.Date10_28.Controller.UserController;
-import com.example.springboot.Controller.Date10_28.domain.User;
+import Date10_28.domain.User;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
