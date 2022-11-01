@@ -1,4 +1,4 @@
-package Date10_28.domain;
+package com.example.springboot.Controller.Date10_28.domain;
 
 public class User {
 
