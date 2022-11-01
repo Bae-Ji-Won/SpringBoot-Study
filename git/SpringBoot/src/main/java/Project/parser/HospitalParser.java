@@ -25,10 +25,10 @@ public class HospitalParser implements Parser<Hospital> {
 //    assertEquals(52.29, hospital.getTotalAreaSize()); //col:32
     @Override
     public Hospital parse(String str) {
-        String[] row = str.split("\",\"");
+        String[] row = str.split("\",\"");      // \,\ 기준으로 나눔
 
         Hospital hospital = new Hospital();
-        hospital.setId(Integer.parseInt(row[0].replace("\"","")));
+        hospital.setId(Integer.parseInt(row[0].replace("\"","")));  // 첫번째는 \으로 시작하기 때문에 replace해주고 시작
         hospital.setOpenServiceName(row[1]);
         hospital.setOpenLocalGovernmentCode(Integer.parseInt(row[3]));
         hospital.setManagementNumber(row[4]);
@@ -48,7 +48,7 @@ public class HospitalParser implements Parser<Hospital> {
         hospital.setHealthcareProviderCount(Integer.parseInt(row[29]));
         hospital.setPatientRoomCount(Integer.parseInt(row[30]));
         hospital.setTotalNumberOfBeds(Integer.parseInt(row[31]));
-        hospital.setTotalAreaSize(Float.parseFloat(row[32].replace("\"","")));
+        hospital.setTotalAreaSize(Float.parseFloat(row[32].replace("\"","")));  // 마지막은 \로 끝나기 때문에 replace로 지워준다
 
 
         return hospital;
