@@ -5,7 +5,9 @@
 
 - 2022-10-27 : Rest API(GET,POST,PUT,DELETE) + Swagger
 
-- 2022-10-28 :
+- 2022-10-28 : Swagger + Logback + CURD통한 DB연동 및 데이터 호출
+
+- 2022-10-31 : Java -> Spring -> SpringBoot 지금까지 배운 내용들을 토대로 전국 병원 정보 API 만들기 1 
 
 # ⚙️ 기술 스택
 <div>
