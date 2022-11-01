@@ -1,4 +1,4 @@
-package com.example.springboot.Controller.Date10_28;
+package Date10_28;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
