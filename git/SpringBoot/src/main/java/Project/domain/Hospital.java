@@ -9,6 +9,7 @@ import lombok.Setter;
 import java.time.LocalDateTime;
 import java.util.Date;
 
+// DTO 클래스
 @AllArgsConstructor         // lombok이 알아서 생성자를 만들어줌 즉, 내가 만들지 않아도 됨
 @Getter                     // Getter 생성
 @NoArgsConstructor          // 빈 생성자 생성
@@ -30,9 +31,4 @@ public class Hospital {
     private int patientRoomCount;
     private int totalNumberOfBeds;
     private float totalAreaSize;
-
-
-
-
-
 }
