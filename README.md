@@ -9,7 +9,12 @@
 
 - 2022-10-31 : Java -> Spring -> SpringBoot 지금까지 배운 내용들을 토대로 전국 병원 정보 API 만들기 1일차
 
-- 2022-11-01 : 전국 병원 정보 API 만들기 2일차
+- 2022-11-01 : 전국 병원 정보 API 만들기 2일차(Parser,Factory,DAO,DTO 추가)
+
+- 2022-11-02 : 전국 병원 정보 API 만들기 3일차(Controller,Service 추가) + Docker
+
+- 2022-11-03 : 
+
 # ⚙️ 기술 스택
 <div>
   <img alt="Java" src ="https://img.shields.io/badge/Java-007396.svg?&style=for-the-badge&logo=Java&logoColor=white"/>
