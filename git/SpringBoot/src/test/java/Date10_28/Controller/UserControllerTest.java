@@ -38,14 +38,14 @@ class UserControllerTest {
 //                .andExpect(content().string(user.getName()));    // 응답 본문의 내용이 user와 일치하는지 검증
 //    }
     
-    @Test
-    @DisplayName("POST 테스트")
-    public void PostTest() throws Exception {
-        String str = user.toString();
-        mockMvc.perform(post("/useradd")
-                .content(str)
-                .contentType(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk())
-                .andExpect(content().string("id =1,name =test1,password =1234"));
-    }
+//    @Test
+//    @DisplayName("POST 테스트")
+//    public void PostTest() throws Exception {
+//        String str = user.toString();
+//        mockMvc.perform(post("/useradd")
+//                .content(str)
+//                .contentType(MediaType.APPLICATION_JSON))
+//                .andExpect(status().isOk())
+//                .andExpect(content().string("id =1,name =test1,password =1234"));
+//    }
 }
