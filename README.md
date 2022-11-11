@@ -19,7 +19,7 @@
 - 2022-11-03 : Docker DB연결해서 API 배포, Docker 실습(구조파악, WordPress, 볼륨)
 
 - 2022-11-07 : Springboot + Mustache + JPA 연동
-  Mustache + JPA부터 새로운 레포지스토리 사용 : <br> https://github.com/Bae-Ji-Won/springboot-mustache-bbs
+  Mustache + JPA부터 새로운 Repository 사용 : <br> https://github.com/Bae-Ji-Won/springboot-mustache-bbs
 
 # ⚙️ 기술 스택
 <div>
