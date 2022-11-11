@@ -1,6 +1,9 @@
 ### 🦁 멋쟁이사자처럼 백엔드
 
 # 🗓 공부 일정
+
+📄 실습 정리 블로그 : https://velog.io/@qowl880/series/%EC%9E%90%EB%B0%94-%EC%8B%A4%EC%8A%B5
+
 - 2022-10-26 : Spring boot 시작<br>
 
 - 2022-10-27 : Rest API(GET,POST,PUT,DELETE) + Swagger
